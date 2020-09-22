@@ -25,7 +25,7 @@ ERROR_PENALTY = 10 #penalty for error in latent state
 ENERGY_PENALTY = 2 #penalty for energy expenditure
 SMOOTHNESS_PENALTY = 0.1 #penalty for large fluctuations
 
-def weighting_Matrix(control_Num, overlap_Num, spread, intensity):
+def weighting_Matrix(control_Num, overlap_Num, spread = 10, intensity = 10):
     stim_A_num = np.ceil(0.5*(control_Num + overlap_Num))
     stim_B_num = stim_A_num
 
@@ -105,10 +105,10 @@ class olfactory_model(object):
 
         return x_Response, nu_Response
 
-def postprocessing(x_Response):
+def postprocessing(x_Response, C = 11):
 
     stim_A_num = int(np.ceil((N+C)/2))
-    pure_stim_A = stim_A_num - C
+    pure_stim_A = int(stim_A_num - C)
 
     x_blue_tuned = x_Response[0:pure_stim_A,:]
     x_untuned = x_Response[pure_stim_A:stim_A_num, :]
@@ -125,7 +125,7 @@ def postprocessing(x_Response):
 
     return x_blue_mean, x_blue_std, x_untuned_mean, x_untuned_std, x_red_mean, x_red_std
 
-def main():
+def run_main_prog():
 
     drift = -0.25
     spread = 10
@@ -162,6 +162,7 @@ def main():
     ax1.fill_between(t_index, x_blue_mean+x_blue_std, x_blue_mean-x_blue_std, facecolor='blue', alpha=0.5)
     ax1.fill_between(t_index, x_untuned_mean+x_untuned_std, x_untuned_mean-x_untuned_std, facecolor='magenta', alpha=0.5)
     ax1.fill_between(t_index, x_red_mean+x_red_std, x_red_mean-x_red_std, facecolor='red', alpha=0.5)
+    ax1.set(xlabel='Time in seconds', ylabel='Neural activity')
     ax1.set_xlim([0, T_END])
 
     ax2.plot(nu_Response[0,:], nu_Response[1,:], color= 'blue')
@@ -169,8 +170,9 @@ def main():
     ax2.text(0.8, -0.15, 'Nominal Representation', fontsize=12)
     ax2.set_xlim([-0.2, 1.2])
     ax2.set_ylim([-0.2, 1.2])
+    ax2.set(xlabel='Latent Dimension 1', ylabel='Latent Dimension 2')
     ax2.grid()
 
     plt.show()
 
-main()
+# run_main_prog()
