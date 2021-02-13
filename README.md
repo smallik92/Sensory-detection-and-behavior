@@ -10,5 +10,4 @@ Find the following codes in this repository
 2. Effect of increasing similarity between two stimuli on neural activity and latent representation. 
 3. Changing penalty incurred for poor latent representation, energy expenditure, rapid fluctuations
 
-More coming soon...
-4. Reciprocal Excitatory Inhibitory Architecture 
+
