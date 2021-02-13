@@ -13,6 +13,8 @@ Find the following codes in this repository
 
 ![Model simulation](https://github.com/smallik92/Normative-model-olfaction/blob/master/Figure_1.png)
 
+To get the next two figures run normative_olfaction_parameter_sweep.py and play with the parameters!!!
+
 ![Changing the amount of overlap between sensitivity of two types of neurons](https://github.com/smallik92/Normative-model-olfaction/blob/master/Figure_2.png)
 
 ![Changing the emphasis on different parameters of optimizatiob](https://github.com/smallik92/Normative-model-olfaction/blob/master/Figure_3.png)
