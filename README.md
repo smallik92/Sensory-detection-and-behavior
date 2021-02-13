@@ -11,3 +11,7 @@ Find the following codes in this repository
 3. Changing penalty incurred for poor latent representation, energy expenditure, rapid fluctuations
 
 
+![Model simulation](https://github.com/smallik92/Normative-model-olfaction/blob/master/Figure_1.png)
+
+
+
