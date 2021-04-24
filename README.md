@@ -1,15 +1,17 @@
-# Normative model of olfaction
+# Sensory detection, adaptation and behavior generation
 
-Python code for normative model of sensory detection (with specific focus on olfaction). 
+This is the GitHub repository containing the Python codes for recreating the models for olfactory detection, neural adaptation and behavior that I formulated as part of my doctoral research.
 
-Find full paper here:
+Find full paper of olfactory detection here:
 https://www.jneurosci.org/content/40/17/3408
 
-Find the following codes in this repository
-1. Sensory detection via tracking nominal representation.
-2. Effect of increasing similarity between two stimuli on neural activity and latent representation. 
-3. Changing penalty incurred for poor latent representation, energy expenditure, rapid fluctuations
+In this repository you can find scripts for accomplishing the following:
+1. Recreating the model of olfactory detection (normative_olfaction.py)
+2. Exploring the model predictions with changes in the parameter space (normative_olfaction_parameter_sweep.py)
+3. Recreating the model for neural adaptation (model_habituation.py)
+4. Reacreating the model of behavior generation using HMM architecture (model_habituation_behavior.py)
 
+Below is sneak peek into what the model simulations look like:
 
 ![Model simulation](https://github.com/smallik92/Normative-model-olfaction/blob/master/Figure_1.png)
 
