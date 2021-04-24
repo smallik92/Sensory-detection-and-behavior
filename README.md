@@ -5,6 +5,10 @@ This is the GitHub repository containing the Python codes for recreating the mod
 Find full paper of olfactory detection here:
 https://www.jneurosci.org/content/40/17/3408
 
+Our paper of neural and behavioral adaptation is currently under preparation!
+
+Dependencies required for simulating these models: numpy, scipy, matplotlib
+
 In this repository you can find scripts for accomplishing the following:
 1. Recreating the model of olfactory detection (normative_olfaction.py)
 2. Exploring the model predictions with changes in the parameter space (normative_olfaction_parameter_sweep.py)
