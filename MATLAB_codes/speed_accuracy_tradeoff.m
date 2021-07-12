@@ -33,14 +33,14 @@ overlap_Num = 11; %number of untuned neural units
 %% Specifications for setting up LQR
 
 model_params_obj.drift = -0.2;
-% model_params_obj.latent_penalty = 10;
-% model_params_obj.energy_penalty = 2;
 model_params_obj.deriv_penalty = 0.1;
 model_params_obj.noise_var_x = 0;
 model_params_obj.noise_var_nu =  0;
 
 energy_penalty_array = 2:2:24; 
 latent_penalty_array = 2:2:30;
+
+ball_radius = 0.3; 
 
 error = zeros(length(energy_penalty_array), length(latent_penalty_array));
 reaction_time = zeros(length(energy_penalty_array), length(latent_penalty_array));
@@ -57,7 +57,7 @@ for k = 1:length(energy_penalty_array)
         error(k, l) = norm(nu_Response(:, (t_init+t_on)/dt) - z1);
         
         for t = 1:t_on/dt
-            if norm(nu_Response(:, t)-z1) < 0.3
+            if norm(nu_Response(:, t)-z1) < ball_radius
                 reaction_time(k, l) = t*dt;
                 break
             end
