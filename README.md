@@ -7,7 +7,8 @@ https://www.jneurosci.org/content/40/17/3408
 
 Our paper of neural and behavioral adaptation is currently under preparation!
 
-Dependencies required for simulating these models: numpy, scipy, matplotlib
+Dependencies required for simulating these models in Python: numpy, scipy, matplotlib
+Dependencies required for simulating these models in MATLAB: cvx toolbox, control systems toolbox etc.
 
 In this repository you can find scripts for accomplishing the following:
 1. Recreating the model of olfactory detection (normative_olfaction.py)
